@@ -3,11 +3,15 @@ def random_number
 end
 
 def run_guessing_game
-  puts "Guess a number between 1 and 6."
+ 
   user_input = gets.chomp
+  while user_input == nil 
+   puts "Guess a number between 1 and 6."
   if user_input == random_number
     "You guessed the correct number!"
-  else
+  elsif user_input =! random_number
   "The computer guessed #{random_number}."
+  elsif user_input == "exit"
+  break
   end
 end
